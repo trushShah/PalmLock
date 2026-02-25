@@ -58,16 +58,6 @@ Everything runs in the background while the application lives inside the system 
 
 ![Image of Gesture Mapping Set](image.png)
 
-## Mapping Summary
-
-- Open Palm (Front) → Lock Workstation
-
-- Fist (Front) → Show Desktop
-
-- Two Fingers (Back, Up/Down) → Volume Control
-
-- Three Fingers (Back, Up) → Take Screenshot
-
 ## Follow These Steps (From Scratch)
 
 If you want to run this project on your system:
@@ -142,12 +132,12 @@ requirements.txt
 2. Build Executable
 
    ```bash
-    pyinstaller --name PalmLock --onedir --noconsole --collect-all mediapipe --hidden-import=pycaw --hidden-import=comtypes main.py`
+    pyinstaller --name PalmLock --onedir --noconsole --collect-all mediapipe --hidden-import=pycaw --hidden-import=comtypes main.py
 
 3. Then run
 
    ```bash
-   dist/PalmLock/PalmLock.exe`
+   dist/PalmLock/PalmLock.exe
 
 ## Conclusion
 
