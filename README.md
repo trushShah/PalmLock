@@ -81,8 +81,8 @@ If you want to run this project on your system:
 2. Create a Virtual Environment
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/PalmLock.git
-   cd PalmLock
+   python -m venv palm_env
+   palm_env\Scripts\activate
 
 3. Install Dependancies
 
@@ -94,25 +94,9 @@ If you want to run this project on your system:
    ```bash
    python main.py
 
-
-
 You will see a tray icon appear.
 
 Right-click → Enable Gesture → Start using hand gestures.
-
-## Architecture of the Project
-
-PalmLock/
-│
-├── main.py
-├── tray.py
-├── engine.py
-├── actions.py
-├── ui.py
-├── config.py
-├── requirements.txt
-├── README.md
-└── .gitignore
 
 ## File Breakdown
 
@@ -126,7 +110,7 @@ tray.py
 
 engine.py
 
-- Core gesture detection engine. Handles webcam feed, MediaPipe processing, gesture classification,cooldown logic, and action triggering.
+- Core gesture detection engine. Handles webcam feed, MediaPipe processing, gesture classification, cooldown logic, and action triggering.
 
 actions.py
 
@@ -150,17 +134,20 @@ requirements.txt
 
 ## Execution Steps
 
-Run from source
+1. Run from source
 
-`python main.py`
+   ```bash
+   python main.py
 
-Build Executable
+2. Build Executable
 
-`pyinstaller --name PalmLock --onedir --noconsole --collect-all mediapipe --hidden-import=pycaw --hidden-import=comtypes main.py`
+   ```bash
+    pyinstaller --name PalmLock --onedir --noconsole --collect-all mediapipe --hidden-import=pycaw --hidden-import=comtypes main.py`
 
-Then run
+3. Then run
 
-`dist/PalmLock/PalmLock.exe`
+   ```bash
+   dist/PalmLock/PalmLock.exe`
 
 ## Conclusion
 
