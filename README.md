@@ -84,6 +84,16 @@ If you want to run this project on your system:
    ```bash
    python main.py
 
+5. Build Executables
+
+   ```bash
+    pyinstaller --name PalmLock --onedir --noconsole --collect-all mediapipe --hidden-import=pycaw --hidden-import=comtypes main.py
+
+6. Then run
+
+   ```bash
+   dist/PalmLock/PalmLock.exe
+
 You will see a tray icon appear.
 
 Right-click → Enable Gesture → Start using hand gestures.
@@ -121,23 +131,6 @@ requirements.txt
 .gitignore
 
 - Prevents build artifacts, virtual environments, and temporary files from being pushed to GitHub.
-
-## Execution Steps
-
-1. Run from source
-
-   ```bash
-   python main.py
-
-2. Build Executable
-
-   ```bash
-    pyinstaller --name PalmLock --onedir --noconsole --collect-all mediapipe --hidden-import=pycaw --hidden-import=comtypes main.py
-
-3. Then run
-
-   ```bash
-   dist/PalmLock/PalmLock.exe
 
 ## Conclusion
 
